@@ -1,0 +1,263 @@
+{
+  "title": {
+    "value": {
+      "param": {
+        "type": "string",
+        "regex": ".{1,250}"
+      }
+    },
+    "description": "Title of paper. Add TeX formulas using the following formats: $In-line Formula$ or $$Block Formula$$",
+    "order": 1
+  },
+  "paper_length": {
+    "value": {
+      "param": {
+        "type": "string",
+        "enum": [
+          "Long paper",
+          "Short paper"
+        ],
+        "input": "radio"
+      }
+    },
+    "description": "Please indicate if you are submitting a long (8 pages + 1 references) or a short (4 pages + 1 references) paper.",
+    "order": 2
+  },
+  "industry_paper": {
+    "value": {
+      "param": {
+        "type": "string",
+        "enum": [
+          "Yes",
+          "No"
+        ],
+        "input": "radio"
+      }
+    },
+    "description": "Is this submission discussing an industrial application of planning and scheduling?",
+    "order": 3
+  },
+  "authors": {
+    "value": {
+      "param": {
+        "type": "string[]",
+        "regex": "[^;,\\n]+(,[^,\\n]+)*",
+        "hidden": true
+      }
+    },
+    "description": "Comma separated list of author names.",
+    "order": 4
+  },
+  "authorids": {
+    "value": {
+      "param": {
+        "type": "group[]",
+        "regex": "~.*|([a-z0-9_\\-\\.]{1,}@[a-z0-9_\\-\\.]{2,}\\.[a-z]{2,},){0,}([a-z0-9_\\-\\.]{1,}@[a-z0-9_\\-\\.]{2,}\\.[a-z]{2,})"
+      }
+    },
+    "description": "Search author profile by first, middle and last name or email address. If the profile is not found, you can add the author by completing first, middle, and last names as well as author email address.",
+    "order": 5
+  },
+  "student_paper": {
+    "value": {
+      "param": {
+        "type": "string",
+        "enum": ["Yes", "No"],
+        "input": "radio"
+      }
+    },
+    "description": "Is the leading author a student enrolled in a Master or Phd program?. Papers where the leading authors are students are eligible for the Best Student Paper award.",
+    "order": 6
+  },
+  "type_of_contribution": {
+    "value": {
+      "param": {
+        "type": "string[]",
+        "enum": [
+          "Theory",
+          "Algorithms",
+          "Models and Representations",
+          "Position Paper",
+          "Tools"
+        ],
+        "input": "select"
+      }
+    },
+    "description": "What is the nature of the contributions in this paper? See documentation on the ICAPS 2025 website (https://icaps25.icaps-conference.org/organisation/paper_classification_system/). We recommend authors to pick one option, but multiple choices are possible.",
+    "order": 7
+  },
+  "topic": {
+    "value": {
+      "param": {
+        "type": "string[]",
+        "enum": [
+          "Abstract Models",
+          "Machine Learning",
+          "Robotics and Control Theory",
+          "Human-Aware",
+          "Applications",
+          "Knowledge Engineering"
+        ],
+        "input": "select"
+      }
+    },
+    "description": "What is the Topic for this paper? See documentation on the ICAPS 2025 website (https://icaps25.icaps-conference.org/organisation/paper_classification_system/). We recommend authors to pick one option, but multiple choices are possible.",
+    "order": 8
+  },
+  "mandatory_subject_tags": {
+    "value": {
+      "param": {
+        "type": "string[]",
+        "enum": [
+          "PS: Activity and plan recognition",
+          "PS: Applications",
+          "PS: Learning for planning and scheduling",
+          "PS: Mixed discrete/continuous planning",
+          "PS: Model-based reasoning",
+          "PS: Optimization of spatio-temporal systems",
+          "PS: Plan execution and monitoring",
+          "PS: Planning under uncertainty",
+          "PS: Planning with large language models",
+          "PS: Planning with Markov decision process models (MDPs, POMDPs)",
+          "PS: Re-planning and plan repair",
+          "PS: Routing",
+          "PS: Scheduling",
+          "PS: Scheduling under uncertainty",
+          "PS: Temporal planning",
+          "PS: Distributed and multi-agent planning",
+          "PS: Planning with Hierarchical Task Networks (HTN)",
+          "PS: Classical (fully-observable, deterministic) planning",
+          "PS: Fully observable non-deterministic planning",
+          "PS: Partially observable planning",
+          "PS: Planning with incomplete models",
+          "PS: Real-time planning",
+          "PS: Theoretical foundations of planning",
+          "PS: Multi-agent path-finding",
+          "PS: Generalized planning",
+          "PS: Search in planning and scheduling",
+          "PS: SAT, SMT and CP",
+          "PS: Local search and evolutionary programming",
+          "PS: Sub-modular and gradient-free optimization",
+          "PS: Mathematical programming",
+          "PS: Infinite-horizon optimal control problems",
+          "PS: Model checking for trust, safety and robustness",
+          "ROB: Motion and path planning"
+        ],
+        "input": "select"
+      }
+    },
+    "description": "Select the set of tags that best describe how your paper fits within the ontology for Planning and Scheduling. See documentation on the ICAPS 2025 website (https://icaps25.icaps-conference.org/organisation/paper_classification_system/). Multiple choices are possible.",
+    "order": 9
+  },
+  "additional_subject_tags": {
+    "value": {
+      "param": {
+        "type": "string[]",
+        "enum": [
+          "HAI: Human-Aware planning and behavior prediction",
+          "HAI: Planning and decision support for human-machine teams",
+          "KRR: Reasoning about actions",
+          "KRR: Reasoning about knowledge and belief",
+          "ML: Reinforcement learning",
+          "ML: Representation learning",
+          "UAI: Sequential decision making",
+          "UAI: Uncertainty representations"
+        ],
+        "input": "select",
+        "optional": true
+      }
+    },
+    "description": "Select zero or more of these tags to help find the best reviewers for your paper. See documentation on the ICAPS 2025 website (https://icaps25.icaps-conference.org/organisation/paper_classification_system/).",
+    "order": 10
+  },
+  "TLDR": {
+    "value": {
+      "param": {
+        "fieldName": "TL;DR",
+        "type": "string",
+        "maxLength": 250,
+        "optional": true,
+        "deletable": true
+      }
+    },
+    "description": "\"Too Long; Didn't Read\": a short sentence (max. 250 chars) describing your paper",
+    "order": 11
+  },
+  "abstract": {
+    "value": {
+      "param": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 5000,
+        "input": "textarea",
+        "markdown": true
+      }
+    },
+    "description": "Abstract of paper. Add TeX formulas using the following formats: $In-line Formula$ or $$Block Formula$$. Maximum length allowed is 5,000 characters.",
+    "order": 12
+  },
+  "ethical_and_societal_impact_statement": {
+    "value": {
+      "param": {
+        "type": "string",
+        "enum": [
+          "Yes, we have included an Ethical and Societal Impact statement.",
+          "No, we do not think our submission needs to do so."
+        ],
+        "input": "radio"
+      }
+    },
+    "description": "Please acknowledge the requirement to include in the paper an Ethical and Societal Impact statement as explained in the Call for Papers (https://icaps25.icaps-conference.org/calls/main_track).",
+    "order": 13
+  },
+  "formatting_compliance": {
+    "value":{
+      "param": {
+        "type": "string",
+        "enum": ["Yes"],
+        "input": "radio"
+      }
+    },
+    "description": "Please acknowledge that the submitted PDF complies with the formatting instructions (and double-blind review requirements) as outlined in the Call for Papers (https://icaps25.icaps-conference.org/calls/main_track). It is understood that failure to comply with the instructions will result in desk rejection.",
+    "order": 14
+  },
+  "pdf": {
+    "value": {
+      "param": {
+        "type": "file",
+        "extensions": [
+          "pdf"
+        ],
+        "maxSize": 50
+      }
+    },
+    "description": "Upload a PDF file that ends with .pdf",
+    "order": 15
+  },
+  "supplementary_materials": {
+    "value": {
+      "param": {
+        "type": "file",
+        "extensions": [
+          "zip"
+        ],
+        "maxSize": 50,
+        "optional": true
+      }
+    },
+    "description": "Upload ZIP archive with the supplementary materials attached to this submission. Note that there are specific instructions (https://icaps25.icaps-conference.org/calls/tools_papers_call) for Tools papers. Please use separate directories for implementation artifacts and paper appendices.",
+    "order": 16
+  },
+  "supplementary_materials_anonymisation":
+  {
+    "value": {
+      "param": {
+        "type": "string",
+        "enum": ["Yes", "No", "Not Relevant"],
+        "input": "radio"
+      }
+    },
+    "description": "Have the supplementary materials been anonymised? This is not relevant for 'Tools' submissions or submissions with no supplementary materials. It is understood that failure to comply with the instructions will result in desk rejection.",
+    "order": 17
+  }
+}

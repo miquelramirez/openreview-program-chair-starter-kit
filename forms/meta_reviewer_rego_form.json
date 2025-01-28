@@ -1,0 +1,91 @@
+{
+  "contribution_affinity": {
+    "order": 3,
+    "description": "Please select the type of contributions you are interested in reviewing",
+    "value": {
+      "param": {
+        "type": "string[]",
+        "enum": [
+          "Theory",
+          "Algorithms",
+          "Models and Representations",
+          "Position Paper",
+          "Tools"
+        ],
+        "input": "select"
+      }
+    }
+  },
+  "topic_affinity": {
+    "order": 4,
+    "description": "Please select the general topics you are most interested in and familiar with. Append '(in) Planning and Scheduling' to the topics below as it suits.",
+    "value": {
+      "param": {
+        "type": "string[]",
+              "enum": [
+                  "Abstract Models",
+                  "Machine Learning",
+                  "Robotics and Control Theory",
+                  "Human-aware",
+                  "Applications",
+                  "Knowledge Engineering"
+      ],
+      "input": "select"
+      }
+    }
+  },
+  "expertise_keywords": {
+    "order": 5,
+    "description": "Please select the keywords you would rate highest your confidence as a reviewer",
+    "value": {
+      "param": {
+        "type": "string[]",
+        "enum": [
+            "HAI: Human-Aware planning and behavior prediction",
+            "HAI: Planning and decision support for human-machine teams",
+            "KRR: Reasoning about actions",
+            "KRR: Reasoning about knowledge and belief",
+            "ML: Reinforcement learning",
+            "ML: Representation learning",
+            "PS: Activity and plan recognition",
+            "PS: Applications",
+            "PS: Learning for planning and scheduling",
+            "PS: Mixed discrete/continuous planning",
+            "PS: Model-based reasoning",
+            "PS: Optimization of spatio-temporal systems",
+            "PS: Plan execution and monitoring",
+            "PS: Planning under uncertainty",
+            "PS: Planning with large language models",
+            "PS: Planning with Markov decision process models (MDPs, POMDPs)",
+            "PS: Re-planning and plan repair",
+            "PS: Routing",
+            "PS: Scheduling",
+            "PS: Scheduling under uncertainty",
+            "PS: Temporal planning",
+            "PS: Distributed and multi-agent planning",
+            "PS: Planning with Hierarchical Task Networks (HTN)",
+            "PS: Classical (fully-observable, deterministic) planning",
+            "PS: Fully observable non-deterministic planning",
+            "PS: Partially observable planning",
+            "PS: Planning with incomplete models",
+            "PS: Real-time planning",
+            "PS: Theoretical foundations of planning",
+            "PS: Multi-agent path-finding",
+            "PS: Generalized planning",
+            "PS: Search in planning and scheduling",
+            "PS: SAT, SMT and CP",
+            "PS: Local search and evolutionary programming",
+            "PS: Sub-modular and gradient-free optimization",
+            "PS: Mathematical programming",
+            "PS: Infinite-horizon optimal control problems",
+            "PS: Model checking for trust, safety and robustness",
+            "ROB: Motion and path planning",
+            "UAI: Sequential decision making",
+            "UAI: Uncertainty representations"
+        ],
+        "input": "select"
+      }
+    }
+  }
+
+}

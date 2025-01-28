@@ -1,0 +1,15 @@
+{
+    "additional_comments": {
+    "value": {
+      "param": {
+        "type": "string",
+        "minLength": 100,
+        "maxLength": 200000,
+        "input": "textarea",
+        "markdown": true
+      }
+    },
+    "order": 1,
+    "description": "Please provide additional comments for this decision. Add formatting using Markdown and formulas using LaTeX. For more information see https://openreview.net/faq"
+  }
+}

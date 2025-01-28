@@ -1,0 +1,56 @@
+{
+  "metareview": {
+    "value": {
+      "param": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100000,
+        "input": "textarea",
+        "markdown": true
+      }
+    },
+    "order": 1,
+    "description": "Please provide an evaluation of the quality, clarity, originality and significance of this work, including a list of its pros and cons. Your comment or reply (max 100000 characters). Add formatting using Markdown and formulas using LaTeX. For more information see https://openreview.net/faq"
+  },
+  "recommendation": {
+    "value": {
+      "param": {
+        "type": "string",
+        "enum": [
+          "Accept",
+          "Accept as non-archival extended abstract and poster",
+          "Reject"
+        ],
+        "input": "radio"
+      }
+    },
+    "order": 2
+  },
+  "confidence": {
+    "value": {
+      "param": {
+        "type": "string",
+        "enum": [
+          "5: The area chair is absolutely certain",
+          "4: The area chair is confident but not absolutely certain",
+          "3: The area chair is somewhat confident",
+          "2: The area chair is not sure",
+          "1: The area chair's evaluation is an educated guess"
+        ],
+        "input": "radio"
+      }
+    },
+    "order": 3
+  },
+  "best_paper_award": {
+    "value": {
+      "param": {
+        "type": "string",
+        "enum": ["Yes", "No"],
+        "input": "radio"
+      }
+    },
+    "description": "Do you recommend this paper to be considered for the Best Paper Award?",
+    "order": 4
+  }
+}

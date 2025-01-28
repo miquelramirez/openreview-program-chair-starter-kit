@@ -1,0 +1,86 @@
+{
+  "title": {
+    "value": {
+      "param": {
+        "type": "string",
+        "regex": ".{0,500}"
+      }
+    },
+    "order": 1,
+    "description": "Brief summary of your review."
+  },
+  "review": {
+    "value": {
+      "param": {
+        "type": "string",
+        "minLength": 100,
+        "maxLength": 200000,
+        "input": "textarea",
+        "markdown": true
+      }
+    },
+    "order": 2,
+    "description": "Please provide an evaluation of the quality, clarity, originality and significance of this work, including a list of its pros and cons (max 200000 characters). Add formatting using Markdown and formulas using LaTeX. For more information see https://openreview.net/faq"
+  },
+  "ethical_impacts": {
+    "value": {
+      "param": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000,
+        "input": "textarea",
+        "markdown": true
+      }
+    },
+    "order": 3,
+    "description": "Please provide an assessment on whether the authors are addressing the ethical and future impact of the reported research adequately."
+  },
+  "rating": {
+    "value": {
+      "param": {
+        "type": "integer",
+        "enum": [
+            { "value": 10, "description": "10: Accept and nominate for best paper award" },
+            { "value": 9, "description": "9: Strong accept" },
+            { "value": 8, "description": "8: Clear accept" },
+            { "value": 7, "description": "7: Accept" },
+            { "value": 6, "description": "6: Marginally above acceptance threshold" },
+            { "value": 5, "description": "5: Marginally below acceptance threshold" },
+            { "value": 4, "description": "4: Ok but not good enough - rejection" },
+            { "value": 3, "description": "3: Clear rejection" },
+            { "value": 2, "description": "2: Strong rejection" },
+            { "value": 1, "description": "1: Trivial or wrong" }
+           ],
+        "input": "select"
+      }
+    },
+    "order": 4
+  },
+  "confidence": {
+    "value": {
+      "param": {
+        "type": "integer",
+        "enum": [
+           { "value": 5, "description": "5: The reviewer is absolutely certain that the evaluation is correct and very familiar with the relevant literature" },
+           { "value": 4, "description": "4: The reviewer is confident but not absolutely certain that the evaluation is correct" },
+           { "value": 3, "description": "3: The reviewer is fairly confident that the evaluation is correct" },
+           { "value": 2, "description": "2: The reviewer is willing to defend the evaluation, but it is quite likely that the reviewer did not understand central parts of the paper" },
+           { "value": 1, "description": "1: The reviewer's evaluation is an educated guess" }
+          ],
+        "input": "radio"
+      }
+    },
+    "order": 5
+  },
+  "best_paper_award": {
+    "value": {
+      "param": {
+        "type": "string",
+        "enum": ["Yes", "No"],
+        "input": "radio"
+      }
+    },
+    "description": "Do you recommend this paper to be considered for the Best Paper Award?",
+    "order": 6
+  }
+}
